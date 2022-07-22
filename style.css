@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainDiv{
+    width: 100vw;
+    height: 100vh;
+}
+
+#calenderBox{
+    width: 500px;
+    height: 600px;
+    padding: 2%;
+    border: 1px solid black;
+    justify-content:space-between;
+    
+}
+
+#calenderHead {
+    height: 25%;
+    width: 100%;
+    justify-content: space-between;
+    background: #0000003d url(./img/01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#calender_info {
+    height: 100%;
+    width: 100%;
+    display: inherit;
+    background-color: #00000090;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+#calenderBody {
+    width: 100%;
+    height: 75%;
+    /* border: 2px solid black; */
+    
+}
+
+#days{
+    height: 40px;
+}
+
+#monthDates{
+    height: 100%;
+}
+
+#days,
+#monthDates{
+    width: 100%;
+    display: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #00000090;
+
+}
+span.currentDates,
+span.previousDates,
+span.forwordDates,
+#days span.days{
+    width: calc(100%/7);
+    text-align: center;
+    display: inherit;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+span.currentDates, span.forwordDates,span.previousDates, span.days
+{
+    color: white;
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
