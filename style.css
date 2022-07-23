@@ -1,21 +1,30 @@
-*{
+@font-face {
+    font-family: rufina;
+    src: url(./fonts/Rufina.ttf);
+}
+
+@font-face {
+    font-family: rubik;
+    src: url(./fonts/Rubik.ttf);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#mainDiv{
-    width: 100vw;
-    height: 100vh;
+body {
+    font-family: rubik, serif;
 }
 
-#calenderBox{
+#calenderBox {
     width: 500px;
     height: 600px;
     padding: 2%;
     border: 1px solid black;
-    justify-content:space-between;
-    
+    justify-content: space-between;
+
 }
 
 #calenderHead {
@@ -26,6 +35,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #calender_info {
     height: 100%;
     width: 100%;
@@ -38,52 +48,170 @@
     color: white;
 }
 
+#year,
+#month {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+#year{
+    width: 100%;
+}
+
+#month{
+    width: 50%;
+}
+
+
+.changeYear,
+.changeMonth {
+    border: 1px solid black;
+    border-radius: 25px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    background-color: #ffffff90;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.changeYear{
+    width: 40px;
+    height: 40px;
+}
+
+.changeMonth{
+    width: 35px;
+    height: 35px;
+}
+
+.changeYear:hover,
+.changeMonth:hover{
+    background-color: white;
+}
+
+.changeYear:first-child,
+.changeMonth:first-child
+{
+    background-image: url(./img/icons/back.png);
+}
+
+.changeYear:last-child,
+.changeMonth:last-child
+ {
+    background-image: url(./img/icons/next.png);
+}
+
+
 
 
 #calenderBody {
     width: 100%;
     height: 75%;
-    /* border: 2px solid black; */
-    
 }
 
-#days{
+#days {
     height: 40px;
 }
 
-#monthDates{
+#monthDates {
     height: 100%;
 }
 
 #days,
-#monthDates{
+#monthDates {
     width: 100%;
     display: inherit;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #00000090;
+    padding: 1%;
 
 }
-span.currentDates,
-span.previousDates,
-span.forwordDates,
-#days span.days{
+
+.allDates,
+#days span.days {
     width: calc(100%/7);
     text-align: center;
     display: inherit;
     align-content: center;
     justify-content: center;
     align-items: center;
+    transition: 0.1s;
 }
 
-span.currentDates, span.forwordDates,span.previousDates, span.days
-{
+.allDates, 
+.weakdays,
+.weakenddays {
     color: white;
 }
 
-.flexBox{
+.today{
+    background: #ffffff90;
+    color: black;
+    border-radius: 50%;
+}
+
+.sunday{
+    color: red;
+}
+
+.allDates:hover{
+    /* outline: 1px solid black; */
+    border-radius: 50%;
+    background-color: #b8dbff;
+    color: black;
+}
+
+.flexBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#author{
+    font-size: 15px;
+    margin-left: auto;
+}
+
+
+@media screen and (max-width:500px) {
+    #calenderBox{
+        width: 95%;
+    }
+
+    .changeYear{
+        width: 10vw;
+        height: 10vw;
+    }
+    .changeMonth{
+        width: 7vw;
+        height: 7vw;
+    }
+    #currentYear{
+        font-size: 10vw;
+    }
+
+    #currentMonth{
+        font-size: 5vw;
+    }
+
+    #currentFullDate{
+        font-size: 3vw;
+    }
+    
+    .previousDates,
+    .currentDates,
+    .forwordDates,
+    .days{
+        font-size: 3vw;
+    }
 }

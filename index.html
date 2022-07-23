@@ -12,30 +12,41 @@
 <body>
     <div id="mainDiv" class="flexBox">
         <div id="calenderBox" class="flexBox">
-
             <div id="calenderHead" class="calender flexBox">
                 <div id="calender_info">
-                    <h1 id="year">2022</h1>
-                    <h3 id="month">JULY</h3>
+                    <h1 id="year">
+                        <span id="prevYear" class="changeYear"></span>
+                        <span id="currentYear"></span>
+                        <span id="nextYear" class="changeYear"></span>
+                    </h1>
+
+                    <h3 id="month">
+                        <span id="prevMonth" class="changeMonth"></span>
+                        <span id="currentMonth"></span>
+                        <span id="nextMonth" class="changeMonth"></span>
+                    </h3>
+
                     <p id="currentFullDate">FRIDAY, 22 JULY, 2022</p>
+
                 </div>
             </div>
-
             <div id="calenderBody" class="caledner flexBox">
+
                 <div id="days">
-                    <span class="days">SUN</span>
-                    <span class="days">MON</span>
-                    <span class="days">TUE</span>
-                    <span class="days">WED</span>
-                    <span class="days">THRU</span>
-                    <span class="days">FRI</span>
-                    <span class="days">SAT</span>
+                    <span class="days sunday">SUN</span>
+                    <span class="days weakdays">MON</span>
+                    <span class="days weakdays">TUE</span>
+                    <span class="days weakdays">WED</span>
+                    <span class="days weakdays">THRU</span>
+                    <span class="days weakenddays">FRI</span>
+                    <span class="days weakenddays">SAT</span>
                 </div>
 
                 <div id="monthDates">
 
                 </div>
             </div>
+            <p id="author">Design and Developed By Soumya</p>
         </div>
     </div>
     <script src="./script.js"></script>
